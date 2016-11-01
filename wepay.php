@@ -73,8 +73,8 @@ function wepay_form($params) {
 	$code_ajax = $code_ajax.'
 <!--微信支付ajax跳转-->
 	<script>
-    //设置每隔 5000 毫秒执行一次 load() 方法
-    setInterval(function(){load()}, 5000);
+    //设置每隔 2000 毫秒执行一次 load() 方法
+    setInterval(function(){load()}, 2000);
     function load(){
         var xmlhttp;
         if (window.XMLHttpRequest){
