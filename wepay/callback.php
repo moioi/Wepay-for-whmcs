@@ -18,14 +18,14 @@ function verify_data($order_data) {
 }
 */
 function verify_post($order_data, $key) {
-    log_result(json_encode($order_data));
-    log_result($key);
+    //log_result(json_encode($order_data));
+    //log_result($key);
     if ($order_data['money'] > 0 && !empty($order_data['trade_no']) && !empty($order_data['key']) && $order_data['key'] == $key) {
             $invoiceid = substr(strrchr($order_data['out_trade_no'], "|"), 1);
             if ($invoiceid > 0) {
                 $order_data['invoice_id'] = $invoiceid;
                 $order_data['status']     = 'success';
-                log_result($order_data);
+                //log_result($order_data);
 
                 return $order_data;
             }
