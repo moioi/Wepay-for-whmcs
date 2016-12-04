@@ -58,7 +58,7 @@ function wepay_form($params) {
         "sign"    => $sign
         );
 
-    $url = 'https://pay.momohost.cn/gateways/pay.php';//请求的url地址
+    $url = 'http://pay.momohost.cn/gateways/pay.php';//请求的url地址
      
     $ch = curl_init();//打开
     curl_setopt($ch, CURLOPT_POST, true);
